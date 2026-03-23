@@ -15,9 +15,9 @@
 4. 계산된 시간 동안 LED를 0.2초 간격으로 점멸
 
 ##핵심 코드
-- attachInterrupt(digitalPinToInterrupt(buttonPin), buttonISR, CHANGE);
+1. attachInterrupt(digitalPinToInterrupt(buttonPin), buttonISR, CHANGE);
 - 버튼이 눌렸을때 와 놓았을 때 작동시 작동하는 언터럽트
-- unsigned long duration = pressEnd - pressStart;
+2. unsigned long duration = pressEnd - pressStart;
 -누르기 시작한 시간을 놓은 시간에 빼서 저장(누르고 있던 시간)
-- while (millis() - startTime < duration)
+3. while (millis() - startTime < duration)
 - 점멸을 반복할 조건문 현재 시간에서 loop 코드를 시작할 시간을 뺀 값이 번튼을 누르고 있던 시간보다 작으면 반복 즉,버튼을 누르고 있던 시간만큼 작동
